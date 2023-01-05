@@ -1,0 +1,61 @@
+
+- Activate Virtual Environment -
+
+Generate Virtual Server:
+1. mkdir <project_folder_name>
+2. cd <project_folder_name>
+3. python3 -m venv <server_folder_name>
+
+- Install Django -
+4. python -m pip install --upgrade pip (Get the latest pip version - just in case)
+5. Create requirements.txt to <project_folder_name>/ and write: Django~=3.2.10 in it.
+6. pip install -r requirements.txt
+
+
+Activate VS:
+1. cd to the <project folder name> e.g. djangogirls
+2. C:\Users\Name\djangogirls>   <server_folder_name>\Scripts\activate
+3. C:\Users\Name\djangogirls>   <server_folder_name>\Scripts\deactivate
+
+
+Run Server: C:\Users\Name\djangogirls>python manage.py runserver 
+Stop Server: Ctrl+C
+
+
+
+- GIT -
+
+Create a new Repo:
+1. cd to the desired folder
+2. Add new Repo on GitHub.com -> get link e.g. https://github.com/<your-github-username>/<your-project-name>.git
+2. git init
+3. git remote add origin https://github.com/<your-github-username>/<your-project-name>.git
+
+Push new/updated Code to GitHub:
+1. git status (in red files that has been changed)
+2. git add .
+3. git status (in green files that will be uploaded)
+4. git commit -m "your description" e.g. "First Commit", "added blabla function..."
+5. git push
+
+(git branch -M main)
+(git push -u origin main)
+
+
+
+- PYTHONANYWHERE.COM -
+
+Configure New Site:
+1. pip3.8 install --user pythonanywhere
+2. pa_autoconfigure_django.py --python=3.8 https://github.com/<your-github-username>/<your-project-name>.git
+3. (Yourname.pythonanywhere.com) $ python manage.py createsuperuser
+4. enter Username
+5. enter email
+6. enter pw
+7. enter pw
+
+Load Static Files (CSS, JS, Images) -> necessary step after every update!
+1. cd <Yourname>.pythonanywhere.com
+2. python manage.py collectstatic
+
+
